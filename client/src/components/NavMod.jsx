@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar,NavDropdown } from 'react-bootstrap';
+import { FaUserAlt   } from "react-icons/fa";
 
 import logo from '../assets/carpool-logo.png';
 
@@ -25,7 +26,11 @@ export default function NavMod() {
           <Nav className="ms-auto">
             <Nav.Link href="#search">Search</Nav.Link>
             <Nav.Link href="#publish">Publish a Ride</Nav.Link>
-            <Nav.Link href="#Login">Login</Nav.Link>
+            {/*<Nav.Link href="#Login">Login</Nav.Link>*/}
+            <NavDropdown title={<FaUserAlt />} id="basic-nav--dropdown">
+              <NavDropdown.Item href="#Login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="#SignUp">Sign Up</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
