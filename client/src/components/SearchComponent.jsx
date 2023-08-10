@@ -32,8 +32,13 @@ const SearchComponent = () => {
           <Form.Control type="text" placeholder="Going to" value={toLocation} onChange={(e) => setToLocation(e.target.value)} />
         </Col>
         <Col>
-          <Form.Label >Date</Form.Label>
-          <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+        <Form.Label></Form.Label>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            placeholderText="Select a date"
+            customInput={<Form.Control as="input" />}
+          />
         </Col>
         <Col>
           <InputGroup>
