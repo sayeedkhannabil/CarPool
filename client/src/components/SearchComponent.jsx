@@ -22,9 +22,9 @@ const SearchComponent = () => {
   };
 
   return (
-    <Container>
+    <Container className="my-5">
     <Form>
-      <Row className="align-items-center">
+      <Row className="d-flex align-items-center justify-content-center">
         <Col xs={12} md={2}>
           <Form.Control type="text" placeholder="Leaving from" value={fromLocation} onChange={(e) => setFromLocation(e.target.value)} />
         </Col>
@@ -47,7 +47,7 @@ const SearchComponent = () => {
             <Button variant="outline-secondary" onClick={() => setPassengerCount(passengerCount + 1)}>+</Button>
           </InputGroup>
         </Col>
-        <Col xs={12} md={2}>
+        <Col xs={12} md={1}>
           <Form.Label>&nbsp;</Form.Label>
           <Button variant="primary" onClick={handleSearch}>Search</Button>
         </Col>
