@@ -22,6 +22,7 @@ const SearchComponent = () => {
   };
 
   return (
+    <div className="search-component">
     <Form>
       <Row>
         <Col>
@@ -31,7 +32,7 @@ const SearchComponent = () => {
           <Form.Control type="text" placeholder="Going to" value={toLocation} onChange={(e) => setToLocation(e.target.value)} />
         </Col>
         <Col>
-          <Form.Label>Date</Form.Label>
+          <Form.Label >Date</Form.Label>
           <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
         </Col>
         <Col>
@@ -47,6 +48,7 @@ const SearchComponent = () => {
         </Col>
       </Row>
     </Form>
+    </div>
   );
 };
 
